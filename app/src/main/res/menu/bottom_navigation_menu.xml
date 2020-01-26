@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@id/squaresFragment"
+        android:title="Squares"
+        android:icon="@drawable/ic_settings_black_24dp" />
+
+    <item android:id="@id/infoFragment"
+        android:title="Info"
+        android:icon="@drawable/ic_settings_black_24dp" />
+
+    <item android:id="@id/settingsFragment"
+        android:title="Settings"
+        android:icon="@drawable/ic_settings_black_24dp" />
+
+</menu>
