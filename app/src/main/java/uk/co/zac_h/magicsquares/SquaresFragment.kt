@@ -38,12 +38,21 @@ class SquaresFragment : Fragment() {
         }
 
         squares_finish.setOnClickListener {
+            val columnTotal = IntArray(size) { 0 }
             squaresMatrix.get().forEach {
                 var total = 0
-                it.forEach { value ->
-                    total += value
+                for (r in 0..it.size.minus(1)) {
+                    total += it[r]
+                    columnTotal[r] += it[r]
                 }
                 if (total != squares_total.text.toString().toInt()) {
+                    Toast.makeText(context, "Wrong!", Toast.LENGTH_SHORT).show()
+                    return@setOnClickListener
+                }
+            }
+
+            columnTotal.forEach { columnVal ->
+                if (columnVal != squares_total.text.toString().toInt()) {
                     Toast.makeText(context, "Wrong!", Toast.LENGTH_SHORT).show()
                     return@setOnClickListener
                 }
