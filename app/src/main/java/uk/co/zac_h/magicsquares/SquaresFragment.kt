@@ -10,6 +10,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.android.synthetic.main.fragment_squares.*
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.MainScope
+import kotlinx.coroutines.launch
 import uk.co.zac_h.magicsquares.utils.Matrix
 import uk.co.zac_h.magicsquares.utils.isEven
 import uk.co.zac_h.magicsquares.utils.isOdd
@@ -94,6 +97,8 @@ class SquaresFragment : Fragment() {
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
             }
         })
+
+        squares_size.setText("$size")
     }
 
     private fun solveOdd() {

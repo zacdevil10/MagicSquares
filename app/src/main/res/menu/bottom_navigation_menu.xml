@@ -3,11 +3,11 @@
 
     <item android:id="@id/squaresFragment"
         android:title="Squares"
-        android:icon="@drawable/ic_settings_black_24dp" />
+        android:icon="@drawable/ic_grid" />
 
     <item android:id="@id/infoFragment"
         android:title="Info"
-        android:icon="@drawable/ic_settings_black_24dp" />
+        android:icon="@drawable/ic_info_outline_black_24dp" />
 
     <item android:id="@id/settingsFragment"
         android:title="Settings"
